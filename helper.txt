@@ -1,3 +1,5 @@
 Execução de comando no Docker:
 
-docker run -p 5001:5001 -e ASPNETCORE_URLS=http://0.0.0.0:5001 guilhermefiola/locationservice
+docker run -p 5001:5001 -e PORT=5001 -e ASPNETCORE_URLS=http://0.0.0.0:5001 guilhermefiola/locationservice:nodb
+
+docker run -it --rm --link some-postgres:postgres postgres psql -h postgres -U integrator -d locationservice
