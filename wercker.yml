@@ -43,7 +43,7 @@ build:
               cwd: src/MicroserviceCore.LocationService
               code: |
                   export TRANSIENT=false
-                  export POSTGRES__CSTR="Host=127.0.0.1"
+                  export POSTGRES__CSTR="Host=postgres"
                   export POSTGRES__CSTR="$POSTGRES__CSTR;Username=integrator;Password=inteword;"
                   export POSTGRES__CSTR="$POSTGRES__CSTR;Port=$POSTGRES_PORT_5432_TCP_PORT;Database=locationservice"
                   dotnet ef database update
