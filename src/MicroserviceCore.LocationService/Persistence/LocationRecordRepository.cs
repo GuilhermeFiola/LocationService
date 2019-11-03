@@ -31,7 +31,7 @@ namespace MicroserviceCore.LocationService.Persistence
 
         public LocationRecord Get(Guid memberId, Guid recordId)
         {
-            return this.context.LocationRecords.Single(lr => lr.MemberID == memberId && lr.ID == recordId);
+            return this.context.LocationRecords.FirstOrDefault(lr => lr.MemberID == memberId && lr.ID == recordId);
         }
 
         public LocationRecord Delete(Guid memberId, Guid recordId)

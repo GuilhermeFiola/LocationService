@@ -28,6 +28,7 @@ namespace MicroserviceCore.LocationService.Persistence
             IConfigurationRoot configuration = new ConfigurationBuilder()
                 .SetBasePath(new DirectoryInfo(Directory.GetCurrentDirectory()).FullName)
                 .AddJsonFile("appsettings.json")
+                .AddEnvironmentVariables()
                 .Build();
 
             var optionsBuilder = new DbContextOptionsBuilder<LocationDbContext>();

@@ -111,7 +111,7 @@ namespace MicroserviceCore.LocationService.Integration
             int afterCount = repository.AllForMember(memberId).Count();
 
             LocationRecord target1 = repository.Get(firstRecord.MemberID, firstRecord.ID);
-            LocationRecord target2 = repository.Get(firstRecord.MemberID, secondRecord.ID);
+            LocationRecord target2 = repository.Get(secondRecord.MemberID, secondRecord.ID);
 
             Assert.Equal(initialCount - 1, afterCount);
             Assert.Equal(target1.ID, firstRecord.ID);
